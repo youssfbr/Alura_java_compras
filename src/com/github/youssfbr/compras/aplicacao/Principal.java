@@ -3,6 +3,7 @@ package com.github.youssfbr.compras.aplicacao;
 import com.github.youssfbr.compras.modelos.CartaoDeCredito;
 import com.github.youssfbr.compras.modelos.Compra;
 
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Principal {
@@ -42,6 +43,7 @@ public class Principal {
         System.out.println("\n*************************************");
         System.out.println("\nCOMPRAS REALIZADAS:\n");
 
+        Collections.sort(cartao.getCompras());
         for (Compra c : cartao.getCompras()) {
             System.out.println(c.getDescricao() + " - " + c.getValor());
         }
